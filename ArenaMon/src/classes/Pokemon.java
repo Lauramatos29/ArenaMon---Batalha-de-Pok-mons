@@ -2,6 +2,7 @@ package classes;
 
 import java.util.Scanner;
 
+// Criando a classe abstrata de Pokemon com os seus atributos e métodos:
 abstract class Pokemon {
 	protected String nome;
 	protected String tipo;
@@ -57,7 +58,7 @@ abstract class Pokemon {
 		this.defesa = defesa;
 	}
 	
-	public void exibirPokemon() {
+	public void exibirPokemon() { // Método para exibir as informações do Pokemon
 		System.out.println("Nome: " + nome);
 		System.out.println("Tipo: " + tipo);
 		System.out.println("HP: " + hp);
@@ -65,9 +66,9 @@ abstract class Pokemon {
 		System.out.println("Defesa: " + defesa);
 	}
 	
-	abstract void atacarOponente(Pokemon oponente, Scanner scanner);
+	abstract void atacarOponente(Pokemon oponente, Scanner scanner); // Método abstrato para atacar o oponente
 
-	public boolean estaVivo() {
+	public boolean estaVivo() { // Método para checar se o Pokemon está vivo, crucial na batalha.
 		return hp > 0;
 	}
 	
